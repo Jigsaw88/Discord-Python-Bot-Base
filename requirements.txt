@@ -1,5 +1,4 @@
 discord
-prow
 random
 asyncio
 sys

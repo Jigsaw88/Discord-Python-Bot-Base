@@ -1,7 +1,1 @@
 discord
-random
-asyncio
-sys
-aiohttp
-datetime
-os

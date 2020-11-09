@@ -1,0 +1,76 @@
+pass
+import discord
+from discord.ext import commands
+import json
+
+class Levels:
+    def __init__(self, client):
+        self.bot = bot
+        self.client = bot
+#
+ #       self.bot.loop.create_task(self.save_users())
+#
+  #      with open(r"C:\Users\Jigsa\Desktop\Discord bot Stuff\Jigsaw bot\cogs", 'r') as f:
+ #           self.users = json.load(f)
+#
+#    async def save_users(self):
+    #    await self.bot.wait_until_ready()
+   #     while not self.bot.is_closed():
+  #      with open(r'C:\Users\Jigsa\Desktop\Discord bot Stuff\Jigsaw bot\cogs\users.json', 'w') as f:
+ #           json.dump(self.users, f, indent=4)
+#
+   # def lvl_up(self, author_id):
+  #      cur_xp = self.users[author_id]['xp']
+ #       cur_lvl = self.users[author_id]['lvl']
+#
+     #   if cur_xp >= round(4 * (cur_xp ** 3)) / 5:
+    #        self.users[author_id]['lvl'] += 1
+   #         return True
+  #      else:
+ #           return False
+#
+#
+   # async def on_message(self, ctx, message):
+  #      if message.author == self.bot.user:
+ #           return
+#
+ #       author_id = str(message.author.id)
+#
+    #    if not author_id in self.users:
+   #         self.users[author_id] = {}
+  #          self.users[author_id] = {lvl} = 1
+ #           self.users[author_id] = {xp} = 0
+#
+ #       self.users[author_id]['xp'] += 1
+#
+#
+   #     if self.lvl_up(author_id):
+  #          await ctx.send(f'{message.author.mention} is now level {self.users[author_id]['lvl']}')
+
+
+
+    @commands.command()
+    async def level(self, ctx, member: discord.Member = None):
+        member = ctx.author if not member else member
+        if not member:
+            member = ctx.author
+        else:
+            member = member
+        member_id = str(member.id)
+#
+ #       if not member_id in self.users:
+  #          await ctx.send("User have no Level!")
+   #     else:
+    #        embed = discord.Embed(color=member.color, timestamp=ctx.message.created_at)
+#
+ #           embed.set_author(name=f'Level - {member}', icon_url=self.bot.user.avatar_url)
+#
+ #           embed.add_field(name="Level", value=self.users[member_id]['lvl'])
+  #          embed.add_field(name="XP", value=self.users[member_id]['xp'])
+#
+ #           await ctx.send(embed=embed)
+#
+ #           await ctx.send(self.users[member_id]['lvl'],self.users[member_id]['xp'])
+
+def setup(client):
+    client.add_cog((client))

@@ -8,8 +8,14 @@ from itertools import cycle
 client = commands.Bot(command_prefix='+', help_command=None)
 
 
+
+
+#I would do all the commands in a cog
+
+
+
 async def is_owner(ctx):
-    return ctx.author.id == 639943536346792017
+    return ctx.author.id == 639943536346792017 #Place your ID!
 
 
 @client.command()
@@ -89,15 +95,10 @@ async def on_ready():
 
 async def status_task():
     while True:
-        await client.change_presence(activity=discord.Game('Bot by Jigsaw'), status=discord.Status.do_not_disturb)
+        await client.change_presence(activity=discord.Game('Bot by Jigsaw'), status=discord.Status.do_not_disturb) #this is for the status.
         await asyncio.sleep(7)
         await client.change_presence(activity=discord.Game('Prefix +'), status=discord.Status.do_not_disturb)
         await asyncio.sleep(15)
-        await client.change_presence(activity=discord.Game('Working on the Bot'), status=discord.Status.do_not_disturb)
-        await asyncio.sleep(7)
-        await client.change_presence(activity=discord.Game(f'on {str(len(client.guilds))} Servers!'), status=discord.Status.do_not_disturb)
-        await asyncio.sleep(20)
-
 
 @client.command()
 async def ping(ctx):
@@ -106,7 +107,7 @@ async def ping(ctx):
 
 
 @client.command()
-@commands.has_permissions(manage_messages=True)
+@commands.has_permissions(manage_messages=True) #simple clear command
 async def clear(ctx, amount=1):
     deleted = await ctx.channel.purge(limit=amount)
     await ctx.send('{} Messages deleted!'.format(len(deleted)))
@@ -115,14 +116,14 @@ async def clear(ctx, amount=1):
 
 
 @client.command()
-@commands.has_permissions(kick_members=True)
+@commands.has_permissions(kick_members=True) #simple kick command
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send('User got Kicked!')
 
 
 @client.command()
-@commands.has_permissions(ban_members=True)
+@commands.has_permissions(ban_members=True)# simple ban command
 async def ban(ctx, member: discord.Member, *, reason=None):
     await member.ban(reason=reason)
     await ctx.send(f'**{member.name} get BANNED!**\r\n'
@@ -130,7 +131,7 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 
 
 @client.command()
-@commands.has_permissions(ban_members=True)
+@commands.has_permissions(ban_members=True)#unban command ( Idk if it work)
 async def unban(ctx, member):
     banned_users = await ctx.guild.bans()
     member_name, member_discriminator = member.split('#')

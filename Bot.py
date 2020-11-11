@@ -144,20 +144,6 @@ async def unban(ctx, member):
             return
 
 
-# status
-# @client.command()
-# pass
-# async def userinfo(ctx, member: discord.Member):
-# embed = discord.Embed(title=f"Userinfo for {member.name}", description=" ", color=0x00ff00)
-# embed.set_thumbnail(url=member.avatar_url)
-# embed.add_field(name='ID:', value=member.id)
-# embed.set_footer(text=f"Requeted by {ctx.author}")
-# embed.add_field(name="Joined Server", value=member.joined_at.strftime('%d/%m/%Y, %H:%M:%S'))
-# embed.add_field(name="Joined Discord", value=member.created_at.strftime('%d/%m/%Y, %H:%M:%S'))
-# embed.add_field(name="Status", value=member.status)
-# mess = await ctx.send(embed=embed)
-# await mess.add_reaction(smile)
-
 @kick.error
 async def kick_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):

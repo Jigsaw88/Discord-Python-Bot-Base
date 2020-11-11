@@ -14,7 +14,7 @@ class owner_stuff(commands.Cog):
 
     @commands.command()
     @commands.check(is_dev)
-    async def restart(self, ctx):
+    async def restart(self, ctx):#ik this dont work! fix it by yourself or wait for a update!
         await ctx.send('```RESTART STARTING```')
         await self.client.logout()
         await asyncio.sleep(10)

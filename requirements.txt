@@ -3,6 +3,8 @@ pip install random
 pip install prew
 pip install aiohttp
 pip install os
+pip install sys
+pip install asyncio
 wget https://discord.com/api/download?platform=linux&format=deb
 sudo apt-get install gdebi -y
 gdebi discord-0.0.12.deb

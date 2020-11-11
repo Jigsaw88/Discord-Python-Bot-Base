@@ -180,4 +180,4 @@ async def clear_error(ctx, error):
         await ctx.send('```You dont have the permission to do that```')
 
 
-client.run('Nzc0Mzc3ODgwMTAzOTQ0MjYy.X6W5mQ.nFQ4yFeUUtSc3AGHqZ1PFYWIVfQ')
+client.run('TOKEN')

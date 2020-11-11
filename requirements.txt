@@ -1,2 +1,4 @@
 discord
 wget https://discord.com/api/download?platform=linux&format=deb
+sudo apt-get install gdebi -y
+gdebi discord.deb

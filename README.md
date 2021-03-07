@@ -1,5 +1,5 @@
-# vault-boy
-Discord bot Made in python. 
+# Bot Base
+Discord bot Base Made in python. 
 
 I have made this in discord.py 1.5.1!
 

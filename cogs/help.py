@@ -11,7 +11,7 @@ class Help(commands.Cog):
     async def help(self, ctx):
         embed = discord.Embed(title=" ", description=" ", color=0x00ff00)
         embed.set_author(name="Help", icon_url=ctx.author.avatar_url)
-        embed.add_field(name='Welcome to Vault boy!', value='Made by Jigsaw\n\r'
+        embed.add_field(name='Welcome to Bot Base!', value='Made by Jigsaw\n\r'
                                                             '-')
         embed.add_field(name='`+help_fun`', value='Show Fun commands\n\r'
                                                   '-')

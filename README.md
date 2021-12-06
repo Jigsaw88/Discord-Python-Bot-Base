@@ -1,13 +1,15 @@
 # Bot Base
 Discord bot Base Made in python. 
 
-I have made this in discord.py 1.5.1!
+# Get started
 
-The proc file is for hosting the Bot!
-dont delete it if you dont know what you do lol
+First of all get your bot token (https://discord.com/developers/applications)
+If u got your bot token simply just go and open the "config.json" and put your token in there.
 
-When you use my code please give me credits :)
+![Code_sAhfnEe2ZU](https://user-images.githubusercontent.com/71355908/144773276-4468d097-0eb4-49f7-a9b0-a714f431849a.png)
 
-If you have any Question: 
-Contact me on Discord:
-Jigsaw#0088
+
+# Useful Links
+
+Docs: https://docs.pycord.dev/en/master/
+

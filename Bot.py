@@ -46,12 +46,6 @@ async def reload(ctx, extension):
     await ctx.send(embed=embed)
 
 
-@client.command()
-@commands.check(is_owner)
-async def showcog(ctx):
-    await get_commands()
-
-
 @reload.error
 async def reload_error(ctx, error):
     if isinstance(error, commands.CheckFailure):

@@ -4,10 +4,12 @@ import aiohttp
 from discord.ext import commands, tasks
 import os
 from itertools import cycle
+import json
 
 client = commands.Bot(command_prefix='+', help_command=None)
 
-
+with open("config.json") as f:
+    config = json.load(f)
 
 
 #I would do all the commands in a cog
@@ -161,4 +163,4 @@ async def clear_error(ctx, error):
         await ctx.send('```You dont have the permission to do that```')
 
 
-client.run('TOKEN')
+client.run(config.get('Token'))
